@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12px"
+        android:layout_marginTop="20px"
+        android:text="@string/ATM_prompt_0"
+        android:textColor="@color/funds_ATM_Money_text"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/funds_atm_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:textColor="@color/funds_ATM_Money_text"
+        android:textSize="26px" />
+
+    <TextView
+        android:id="@+id/funds_atm_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:textColor="@color/funds_ATM_Money_text"
+        android:textSize="26px" />
+
+    <TextView
+        android:id="@+id/funds_atm_text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15px"
+        android:layout_marginLeft="10px"
+        android:textColor="@color/funds_ATM_Money_text"
+        android:textSize="26px" />
+
+</merge>

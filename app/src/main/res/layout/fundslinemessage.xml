@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20px"
+    android:background="@drawable/funds_deal_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20px"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/start_Data"
+                android:textColor="@color/write"
+                android:textSize="28px" />
+
+            <Button
+                android:id="@+id/funds_deal_start_yearmd"
+                style="@style/funds_line_select_button"
+                android:layout_width="wrap_content"
+                android:layout_height="60px" />
+
+            <Button
+                android:id="@+id/funds_deal_start_hour"
+                style="@style/funds_line_select_button"
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:hint="00" />
+
+            <Button
+                android:id="@+id/funds_deal_start_minute"
+                style="@style/funds_line_select_button"
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:hint="00" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/end_month"
+                android:textColor="@color/write"
+                android:textSize="28px" />
+
+            <Button
+                android:id="@+id/funds_deal_end_yearmd"
+                style="@style/funds_line_select_button"
+                android:layout_width="wrap_content"
+                android:layout_height="60px" />
+
+            <Button
+                android:id="@+id/funds_deal_end_hour"
+                style="@style/funds_line_select_button"
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:hint="23" />
+
+            <Button
+                android:id="@+id/funds_deal_end_minute"
+                style="@style/funds_line_select_button"
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:hint="59" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/funds_deal_button"
+            android:layout_width="match_parent"
+            android:layout_height="95px"
+            android:layout_marginBottom="30px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@drawable/funds_button1_green_selector"
+            android:gravity="center"
+            android:text="@string/funds_search_information"
+            android:textColor="@color/write"
+            android:textSize="30px" />
+    </LinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

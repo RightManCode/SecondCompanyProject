@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/main_fanhui_top"></include>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/sigin_linear"
+                    android:layout_marginTop="20px">
+
+                    <EditText
+                        android:id="@+id/signin_edit_username"
+                        style="@style/login_edittext"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/icon1"
+                        android:hint="@string/signin_edit_username"
+                        android:inputType="text"
+                        android:maxLength="12" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/signin_text"
+                    android:text="@string/signin_text_username" />
+
+                <LinearLayout style="@style/sigin_linear">
+
+                    <EditText
+                        android:id="@+id/sign_edit_passwork"
+                        style="@style/login_edittext"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/icon2"
+                        android:hint="@string/sign_edit_passwork"
+                        android:inputType="textPassword"
+                        android:maxLength="21" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/signin_text"
+                    android:text="@string/signin_text_password" />
+
+                <LinearLayout style="@style/sigin_linear">
+
+                    <EditText
+                        android:id="@+id/sign_edit_twopasswork"
+                        style="@style/login_edittext"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/icon2"
+                        android:hint="@string/sign_edit_twopasswork"
+                        android:inputType="textPassword"
+                        android:maxLength="21" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/signin_text"
+                    android:text="@string/signin_text_password" />
+
+                <LinearLayout style="@style/sigin_linear">
+
+                    <EditText
+                        android:id="@+id/sign_edit_person_name"
+                        style="@style/login_edittext"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/icon1"
+                        android:hint="@string/person_name"
+                        android:inputType="text"
+                        android:maxLength="21" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/signin_text"
+                    android:text="@string/signin_text_name" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="55px"
+                    android:layout_marginRight="55px"
+                    android:background="@drawable/editview_sr_bg_shape">
+
+                    <EditText
+                        android:id="@+id/sign_edit_code"
+                        style="@style/login_edittext"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/signin_refresh_code_image_SR"
+                        android:background="@null"
+                        android:maxLength="15"
+                        android:drawableLeft="@drawable/manhead"
+                        android:hint="@string/sign_edit_verification_code"
+                        android:inputType="text" />
+
+                    <ImageView
+                        android:id="@+id/signin_refresh_code_image_SR"
+                        android:layout_width="160px"
+                        android:layout_height="70px"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="30px"
+                        android:adjustViewBounds="true"
+                        android:background="@color/write"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:textColor="@color/blank" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    style="@style/signin_text"
+                    android:text="@string/signin_text_code" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35px">
+
+                    <Button
+                        android:id="@+id/signin_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="90px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@drawable/funds_selector_button"
+                        android:gravity="center"
+                        android:text="@string/signin"
+                        android:textColor="@color/write"
+                        android:textSize="30px" />
+
+                    <Button
+                        android:id="@+id/sign_button_havausername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80px"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/signin_button"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="10px"
+                        android:background="@drawable/signin_zuceh_button_selector"
+                        android:padding="15px"
+                        android:text="@string/signin_button_hava"
+                        android:textColor="@color/write"
+                        android:textSize="25px" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

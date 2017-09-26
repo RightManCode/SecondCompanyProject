@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_fanhui_top"></include>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout
+            android:id="@+id/quest_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay="true"
+            app:progress_colors="@array/material_colors"
+            app:progress_show_circle_backgroud="true"
+            app:wave_color="@android:color/transparent"
+            app:wave_height_type="higher"
+            app:wave_show="true">
+
+            <ListView
+                android:id="@+id/more_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"></ListView>
+
+        </com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout>
+
+        <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout>
+
+    </FrameLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

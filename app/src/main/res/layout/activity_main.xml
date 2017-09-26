@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mian_Group_button">
+
+        <LinearLayout
+            android:id="@+id/main_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+
+        <include layout="@layout/main_top" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/mian_Group_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/radiogroup_selector_readiobutton_normal"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/main_betting_button"
+            style="@style/mainradiobutton"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/menubar"
+            android:text="@string/home" />
+
+
+        <Button
+            android:id="@+id/main_fund_button"
+            style="@style/mainradiobutton"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/tarbar_fundsmanagement"
+            android:text="@string/fundsmanagement" />
+
+        <Button
+            android:id="@+id/main_line_button"
+            style="@style/mainradiobutton"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/tarbar_lineconversion"
+            android:text="@string/lineconversion" />
+        <!--<FrameLayout-->
+        <!--android:layout_width="0px"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center">-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/main_messagepage_button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:button="@null"-->
+        <!--android:drawablePadding="6px"-->
+        <!--android:drawableTop="@drawable/messagepage"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingTop="10px"-->
+        <!--android:text="@string/messagepage"-->
+        <!--android:textColor="#D8D8D8"-->
+        <!--android:textSize="23px" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/main_message_count_text"-->
+        <!--android:layout_width="40px"-->
+        <!--android:layout_height="40px"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:background="@drawable/mian_message_count_shape"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="@color/write"-->
+        <!--android:textSize="18px"-->
+        <!--android:visibility="gone" />-->
+
+        <!--</FrameLayout>-->
+
+        <Button
+            android:id="@+id/main_customer_button"
+            style="@style/mainradiobutton"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/tarbarkf_customer"
+            android:text="@string/customer" />
+
+    </LinearLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

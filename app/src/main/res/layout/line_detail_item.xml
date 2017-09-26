@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20px"
+        android:layout_marginRight="20px"
+        android:orientation="vertical"
+        android:layout_marginLeft="20px"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="34px"
+                android:layout_height="28px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10px"
+                android:background="@drawable/celldottips"
+                android:contentDescription="" />
+
+            <!--流水号-->
+            <LinearLayout
+                android:padding="10px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180px"
+                    android:layout_marginLeft="20px"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/write"
+                    android:text="流水号："
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/write"
+                    android:textSize="25px" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:text="美东时间："
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                android:id="@+id/tv_mdtime"
+                style="@style/funds_ATM_Money_textid" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:text="北京时间："
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                android:id="@+id/tv_bjtime"
+                style="@style/funds_ATM_Money_textid" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView style="@style/funds_ATM_Money"
+                android:text="类型："/>
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/funds_ATM_Money_textid" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView style="@style/funds_ATM_Money"
+               android:text="金额："/>
+            <TextView
+                android:id="@+id/tv_money"
+                style="@style/funds_ATM_Money_textid" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:text="状态："
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                style="@style/funds_ATM_Money_textid"
+                android:id="@+id/tv_state" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:text="结果："
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                style="@style/funds_ATM_Money_textid"
+                android:id="@+id/tv_over"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.zhy.autolayout.AutoFrameLayout>

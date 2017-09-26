@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_all_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="85px"
+        android:background="@drawable/fund_submenu_bg">
+
+        <!--返回按钮-->
+        <ImageView
+            android:id="@+id/top_fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/fanhui"
+            android:contentDescription=""
+            android:visibility="visible" />
+
+        <!--游戏列表-->
+        <TextView
+            android:id="@+id/top_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/write"
+            android:textSize="33px"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout
+            android:id="@+id/sixspaces_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay="true"
+            app:progress_colors="@array/material_colors"
+            app:wave_color="@android:color/transparent"
+            app:progress_show_circle_backgroud="true"
+            app:wave_height_type="higher"
+            app:wave_show="true">
+
+            <ListView
+                android:id="@+id/sixspaces_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"></ListView>
+
+        </com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout>
+
+
+        <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout>
+
+    </FrameLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

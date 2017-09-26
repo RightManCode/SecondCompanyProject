@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_fanhui_top"></include>
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout
+            android:id="@+id/quest_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:overlay="true"
+            app:progress_colors="@array/material_colors"
+            app:progress_show_circle_backgroud="true"
+            app:wave_color="@android:color/transparent"
+            app:wave_height_type="higher"
+            app:wave_show="true">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:fillViewport="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="13px"
+                        android:background="@drawable/funds_deal_shape"
+                        android:orientation="vertical">
+
+                        <com.wishland.www.xinwanhaotest.view.customgridview.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/speck"
+                            android:drawablePadding="20px"
+                            android:gravity="center_vertical"
+                            android:padding="15px"
+                            android:text="汇款提交"
+                            android:textColor="@color/write"
+                            android:textSize="30px" />
+
+                        <TextView
+                            android:id="@+id/pay_text01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#242B33"
+                            android:padding="20px"
+                            android:textColor="@color/write"
+                            android:textSize="28px"
+                            tools:text="01 请选择以下公司账号进行转账汇款" />
+
+
+                        <com.wishland.www.xinwanhaotest.view.customgridview.CustomListView
+                            android:id="@+id/pay_tl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36px"
+                            android:layout_marginTop="20px"
+                            android:text="@string/ATM_prompt_0"
+                            android:textColor="@color/write"
+                            android:textSize="30px" />
+
+                        <com.wishland.www.xinwanhaotest.view.customgridview.CustomListView
+                            android:id="@+id/pay_lt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20px"
+                            android:divider="@color/transparent"
+                            android:dividerHeight="10px" />
+
+                        <TextView
+                            android:id="@+id/pay_text02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#242B33"
+                            android:padding="20px"
+                            android:textColor="@color/write"
+                            android:textSize="28px"
+                            tools:text="02 填写汇款单" />
+
+                        <LinearLayout
+                            style="@style/alipay_hk_linear"
+                            android:layout_marginTop="15px">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="@string/hands_user" />
+
+                            <TextView
+                                android:id="@+id/pay_userid"
+                                style="@style/funds_ATM_Money_textid"
+                                tools:text="textjishu" />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/alipay_hk_linear">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="汇款金额" />
+
+                            <EditText
+                                android:id="@+id/pay_EM"
+                                style="@style/alipay_hk_text"
+                                android:gravity="center_vertical"
+                                android:inputType="number|numberDecimal"
+                                tools:text="25.63" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/alipay_hk_linear">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="汇款银行" />
+
+                            <Button
+                                android:id="@+id/pay_bank"
+                                style="@style/alipay_hk_text"
+                                android:gravity="center_vertical"
+                                tools:text="农业银行" />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/alipay_hk_linear">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="汇款日期" />
+
+                            <Button
+                                android:id="@+id/pay_data"
+                                style="@style/alipay_hk_text"
+                                android:gravity="center_vertical" />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/alipay_hk_linear">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="汇款时间" />
+
+                            <Button
+                                android:id="@+id/pay_shi"
+                                style="@style/alipay_hk_button"
+                                android:layout_width="120px"
+                                android:layout_height="60px"
+                                android:hint="00" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60px"
+                                android:gravity="center"
+                                android:padding="15px"
+                                android:text="时"
+                                android:textColor="@color/write"
+                                android:textSize="28px" />
+
+                            <Button
+                                android:id="@+id/pay_fen"
+                                style="@style/alipay_hk_button"
+                                android:layout_width="100px"
+                                android:layout_height="60px"
+                                android:hint="00" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60px"
+                                android:gravity="center"
+                                android:padding="15px"
+                                android:text="分"
+                                android:textColor="@color/write"
+                                android:textSize="28px" />
+
+                            <Button
+                                android:id="@+id/pay_miao"
+                                style="@style/alipay_hk_button"
+                                android:layout_width="100px"
+                                android:layout_height="60px"
+                                android:hint="00" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60px"
+                                android:gravity="center"
+                                android:padding="15px"
+                                android:text="秒"
+                                android:textColor="@color/write"
+                                android:textSize="28px" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="160px"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16px"
+                            android:paddingRight="16px">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="汇款方式" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/pay_type"
+                                    style="@style/alipay_hk_text"
+                                    android:gravity="center_vertical"
+                                    android:hint="==请选择汇款方式=="
+                                    android:textColorHint="@color/edit_hint_color" />
+
+                                <EditText
+                                    android:id="@+id/pay_other_type"
+                                    style="@style/alipay_hk_text"
+                                    android:layout_marginTop="8px"
+                                    android:gravity="center_vertical"
+                                    android:hint="请输入自定义汇款方式"
+                                    android:inputType="text"
+                                    android:textColorHint="@color/edit_hint_color"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/alipay_hk_linear">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="汇款地点" />
+
+                            <EditText
+                                android:id="@+id/pay_address"
+                                style="@style/alipay_hk_text"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                tools:text="古北界南山向北十三里" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/pay_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="95px"
+                            android:layout_margin="30px"
+                            android:background="@drawable/funds_button1_green_selector"
+                            android:gravity="center"
+                            android:text="汇款提交"
+                            android:textColor="@color/write"
+                            android:textSize="30px" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/main_computer_bottom"></include>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout>
+
+        <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.zhy.autolayout.AutoFrameLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

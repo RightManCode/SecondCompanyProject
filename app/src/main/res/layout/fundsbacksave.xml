@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/funds_deal_shape"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.wishland.www.xinwanhaotest.view.customgridview.CustomExpandableListView
+        android:id="@+id/fb_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:childDivider="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="6px"
+        android:padding="6px" />
+
+
+</LinearLayout>

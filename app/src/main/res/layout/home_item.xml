@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20px"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/more_im"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_centerInParent="true"
+        app:actualImageScaleType="fitXY"
+        app:placeholderImage="@drawable/default_img"
+        app:placeholderImageScaleType="fitXY"
+        app:failureImage="@drawable/error"
+        app:failureImageScaleType="centerInside"
+        app:progressBarImage="@drawable/loading"
+        app:progressBarImageScaleType="centerInside"
+        app:progressBarAutoRotateInterval="1500"
+        app:retryImage="@drawable/reload"
+        app:retryImageScaleType="centerInside"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/homemore_relative_shape"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/more_tv_left"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/write"
+            android:textSize="26px"
+            android:padding="16px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/more_tv_right"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/textmore_right"
+            android:textSize="26px"
+            android:padding="16px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

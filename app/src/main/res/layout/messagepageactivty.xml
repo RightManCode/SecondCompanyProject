@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+    <include layout="@layout/main_fanhui_top"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:gravity="center"
+        android:orientation="vertical">
+    <com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout
+        android:id="@+id/quest_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:overlay="true"
+        app:progress_colors="@array/material_colors"
+        app:progress_show_circle_backgroud="true"
+        app:wave_color="@android:color/transparent"
+        app:wave_height_type="higher"
+        app:wave_show="true">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16px"
+                    android:layout_marginTop="20px">
+
+                    <TextView
+                        android:id="@+id/message_all_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="35px"
+                        android:textColor="@color/message_text"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:id="@+id/message_all_text_T"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15px"
+                        android:layout_toRightOf="@+id/message_all_textview"
+                        android:text="@string/message_text"
+                        android:textColor="@color/write"
+                        android:textSize="28px" />
+
+                </RelativeLayout>
+
+                <com.wishland.www.xinwanhaotest.view.customgridview.CustomListView
+                    android:id="@+id/message_show_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:layout_marginTop="40px"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="25px"
+                    android:focusable="false"
+                    android:footerDividersEnabled="false" />
+
+
+                <TextView
+                    android:id="@+id/message_pageitem_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="15px"
+                    android:textColor="@color/blank"
+                    android:textSize="26px" />
+
+                  <include layout="@layout/main_computer_bottom"></include>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout>
+</LinearLayout>
+    </LinearLayout>
+</com.zhy.autolayout.AutoFrameLayout>

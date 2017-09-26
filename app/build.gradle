@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.wishland.www.xinwanhaotest"
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            moduleName "encryption"       //生成的so文件名字，调用C程序的代码中会用到该名字
+            abiFilters "armeabi", "armeabi-v7a", "x86" //输出指定三种平台下的so库
+        }
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+//    signingConfigs {
+//        config {
+//            keyAlias 'whhnq'
+//            keyPassword '321456'
+//            storeFile file('E:/02Android/02新葡京/wanhaohuiNQ/nq_appkey/whhnqkey.jks')
+//            storePassword '321456'
+//        }
+//    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+        }
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
+        xpjtest {}
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    //运行时权限
+    compile 'com.github.hotchemi:permissionsdispatcher:2.4.0'
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:2.4.0"
+    //视图适配
+    compile 'com.zhy:autolayout:1.4.5'
+    //黄油刀
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //RxJava
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    //OkHttp
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.5.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
+    //图片加载框架fresco
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    //图片加载框架glide
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+
+    compile 'com.github.liouhuan:FlexSlider:1.0'
+    //json解析工具
+    compile 'com.google.code.gson:gson:2.8.0'
+
+    compile 'com.android.support:design:25.1.0'
+    //布局兼容函数库
+    compile 'com.android.support:percent:25.1.0'
+    //友盟
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    //特殊适配器（自带刷新）
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.15'
+    //EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //网络请求框架，OkGo
+    compile 'com.lzy.net:okgo:2.1.4'
+    //dialog
+    compile 'com.afollestad.material-dialogs:core:0.9.4.4'
+    //    捕捉异常 防止程序崩溃
+    compile 'com.wanjian:cockroach:0.0.5'
+}

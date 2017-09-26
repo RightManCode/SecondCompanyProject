@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/main_fanhui_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20px"
+                android:background="@drawable/funds_deal_shape"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="50px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/start_Data"
+                        android:textColor="@color/write"
+                        android:textSize="28px" />
+
+                    <Button
+                        android:id="@+id/ed_s_year"
+                        style="@style/funds_line_select_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60px" />
+
+                    <Button
+                        android:id="@+id/ed_s_hour"
+                        style="@style/funds_line_select_button"
+                        android:layout_width="100px"
+                        android:layout_height="60px"
+                        android:hint="00" />
+
+                    <Button
+                        android:id="@+id/ed_s_minute"
+                        style="@style/funds_line_select_button"
+                        android:layout_width="100px"
+                        android:layout_height="60px"
+                        android:hint="00" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="50px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/end_month"
+                        android:textColor="@color/write"
+                        android:textSize="28px" />
+
+                    <Button
+                        android:id="@+id/ed_e_year"
+                        style="@style/funds_line_select_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60px" />
+
+                    <Button
+                        android:id="@+id/ed_e_hour"
+                        style="@style/funds_line_select_button"
+                        android:layout_width="100px"
+                        android:layout_height="60px"
+                        android:hint="23" />
+
+                    <Button
+                        android:id="@+id/ed_e_minute"
+                        style="@style/funds_line_select_button"
+                        android:layout_width="100px"
+                        android:layout_height="60px"
+                        android:hint="59" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50px"
+                    android:layout_marginRight="30px"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/fund_context"
+                        android:textColor="@color/write"
+                        android:textSize="28px" />
+
+                    <Button
+                        android:id="@+id/ed_from"
+                        style="@style/funds_line_select_button"
+                        android:layout_width="0dp"
+                        android:layout_height="60px"
+                        android:layout_marginRight="20px"
+                        android:hint="全部" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5px"
+                        android:layout_marginRight="5px"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/write"
+                        android:textSize="30px" />
+
+                    <Button
+                        android:id="@+id/ed_to"
+                        style="@style/funds_line_select_button"
+                        android:layout_width="0dp"
+                        android:layout_height="60px"
+                        android:hint="全部" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/ed_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="95px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@drawable/funds_button1_green_selector"
+                    android:gravity="center"
+                    android:text="@string/funds_search_information"
+                    android:textColor="@color/write"
+                    android:textSize="30px" />
+
+                <com.wishland.www.xinwanhaotest.view.customgridview.CustomListView
+                    android:id="@+id/ed_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/funds_listhead_item_page"
+                    android:layout_marginBottom="20px"
+                    android:divider="@android:color/transparent" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </ScrollView>
+
+    <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+

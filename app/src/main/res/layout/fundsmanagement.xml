@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout
+        android:id="@+id/quest_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:overlay="true"
+        app:progress_colors="@array/material_colors"
+        app:wave_color="@android:color/transparent"
+        app:progress_show_circle_backgroud="true"
+        app:wave_height_type="higher"
+        app:wave_show="true">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="8dp">
+
+                <include layout="@layout/funds_top_usersetting" />
+
+                <com.wishland.www.xinwanhaotest.view.customgridview.CustomViewPager
+                    android:id="@+id/funds_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="10px"
+                    android:layout_marginTop="25px" />
+
+                <include layout="@layout/main_computer_bottom"></include>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout>
+
+    <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout>
+
+</FrameLayout>
+

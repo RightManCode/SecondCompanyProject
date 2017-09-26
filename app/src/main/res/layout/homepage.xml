@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout
+        android:id="@+id/quest_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:overlay="true"
+        app:progress_colors="@array/material_colors"
+        app:progress_show_circle_backgroud="true"
+        app:wave_color="@android:color/transparent"
+        app:wave_height_type="higher"
+        app:wave_show="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="550px">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/home_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:circle_paddingbuttom="85px"
+                        app:indicator_margin="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <com.wishland.www.xinwanhaotest.view.customgridview.MarqueeTextView
+                            android:id="@+id/home_textvhiew_pmd"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:background="@drawable/fund_menu_bg"
+                            android:drawableLeft="@drawable/home_notice"
+                            android:drawablePadding="15px"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingLeft="10px"
+                            android:singleLine="true"
+                            android:textColor="@color/write"
+                            android:textSize="24px"
+                            tools:text="撒发生的；反馈；啊老师的看法；开始的；疯啦开始的；反馈卡十分大方开朗" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="20px"
+                    android:drawableLeft="@drawable/stars_icon"
+                    android:drawablePadding="10px"
+                    android:gravity="center"
+                    android:text="@string/hotgame"
+                    android:textColor="@color/write"
+                    android:textSize="30px" />
+
+                <LinearLayout
+                    android:id="@+id/ll_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:gravity="center"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="20px"
+                        android:drawableLeft="@drawable/stars_icon"
+                        android:drawablePadding="10px"
+                        android:gravity="center"
+                        android:text="@string/Favourableactivity"
+                        android:textColor="@color/write"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/home_more_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30px"
+                        android:padding="20px"
+                        android:text="@string/home_more"
+                        android:textColor="@color/more"
+                        android:textSize="26px" />
+
+                </RelativeLayout>
+
+                <com.wishland.www.xinwanhaotest.view.customgridview.CustomListView
+                    android:id="@+id/home_more_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20px"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="30px" />
+
+
+                <include layout="@layout/main_computer_bottom" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout>
+
+    <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</com.zhy.autolayout.AutoFrameLayout>
+

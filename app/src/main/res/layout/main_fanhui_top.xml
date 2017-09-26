@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85px"
+    android:background="@drawable/fund_submenu_bg">
+
+    <!--返回按钮-->
+    <ImageView
+        android:id="@+id/top_fanhui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20px"
+        android:background="@drawable/fanhui"
+        android:contentDescription=""
+        android:padding="25px"
+        android:clickable="true"
+        android:visibility="visible" />
+    <!--欢迎注册使用-->
+    <TextView
+        android:id="@+id/top_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_top_cansignin"
+        android:textColor="@color/write"
+        android:textSize="33px"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

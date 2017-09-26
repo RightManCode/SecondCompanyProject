@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/personalaccount_changepass_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#242B33"
+        android:gravity="center_vertical"
+        android:padding="15px"
+        android:paddingLeft="15px"
+        android:text="@string/person_account"
+        android:textColor="@color/message_text"
+        android:textSize="30px" />
+
+    <LinearLayout style="@style/personalaccount_linear">
+
+        <EditText
+            android:id="@+id/personalaccount_oldpassword"
+            style="@style/personalaccount_edittext"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon2"
+            android:hint="@string/personalaccount_oldpassword"
+            android:maxLength="20" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/personalaccount_linear">
+
+        <EditText
+            android:id="@+id/personalaccount_newpassword"
+            style="@style/personalaccount_edittext"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon1"
+            android:hint="@string/personalaccount_newpassword"
+            android:maxLength="20" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/personalaccount_linear">
+
+        <EditText
+            android:id="@+id/personalaccount_mnewpassword"
+            style="@style/personalaccount_edittext"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon2"
+            android:hint="@string/personalaccount_mnewpassword"
+            android:maxLength="20" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/personalaccount_oknewpassword"
+        android:layout_width="match_parent"
+        android:layout_height="95px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/funds_selector_button"
+        android:gravity="center"
+        android:text="@string/tijiao"
+        android:textColor="@color/write"
+        android:textSize="33px" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#242B33"
+        android:gravity="center_vertical"
+        android:padding="15px"
+        android:paddingLeft="15px"
+        android:text="@string/get_money_password"
+        android:textColor="@color/message_text"
+        android:textSize="30px" />
+
+    <LinearLayout style="@style/personalaccount_linear">
+
+        <EditText
+            android:id="@+id/personalaccount_getmoneyoldpassword"
+            style="@style/personalaccount_edittext"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon1"
+            android:hint="@string/personalaccount_getmoneyoldpassword"
+            android:inputType="numberPassword"
+            android:maxLength="6" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/personalaccount_linear">
+
+        <EditText
+            android:id="@+id/personalaccount_getmoneynewpassword"
+            style="@style/personalaccount_edittext"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon2"
+            android:hint="@string/personalaccount_getmoneynewpassword"
+            android:inputType="numberPassword"
+            android:maxLength="6" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/personalaccount_linear">
+
+        <EditText
+            android:id="@+id/prepersonalaccount_getmoneynewpassword"
+            style="@style/personalaccount_edittext"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon2"
+            android:hint="@string/prepersonalaccount_getmoneynewpassword"
+            android:inputType="numberPassword"
+            android:maxLength="6" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/personalaccount_okgetmoneynewpassword"
+        android:layout_width="match_parent"
+        android:layout_height="95px"
+        android:layout_marginBottom="30px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/funds_selector_button"
+        android:gravity="center"
+        android:text="@string/tijiao"
+        android:textColor="@color/write"
+        android:textSize="33px" />
+
+</com.zhy.autolayout.AutoLinearLayout>

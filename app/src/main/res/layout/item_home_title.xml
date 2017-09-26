@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="25px"
+    android:paddingTop="25px">
+
+
+    <FrameLayout
+        android:id="@+id/fl_home_menu"
+        android:layout_width="215px"
+        android:layout_height="212px">
+
+        <ImageView
+            android:id="@+id/iv_game_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@drawable/home_gamebutton_background"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_home"
+                android:layout_width="130px"
+                android:layout_height="90px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="27px"
+                app:actualImageScaleType="fitCenter"
+                app:failureImage="@drawable/error"
+                app:failureImageScaleType="centerInside"
+                app:placeholderImage="@drawable/default_img"
+                app:placeholderImageScaleType="fitXY"
+                app:progressBarAutoRotateInterval="1500"
+                app:progressBarImage="@drawable/loading"
+                app:progressBarImageScaleType="centerInside"
+                app:retryImage="@drawable/reload"
+                app:retryImageScaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15px"
+                android:textColor="@color/home_gridview_item_text"
+                android:textSize="27px" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>
+
+
+

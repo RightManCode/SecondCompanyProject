@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/fc_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="95px"
+        android:layout_marginBottom="6px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="@android:color/transparent"
+        android:textColor="@color/write"
+        android:textSize="28px"></Button>
+
+</com.zhy.autolayout.AutoFrameLayout>
+

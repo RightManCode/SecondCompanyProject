@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_fanhui_top"></include>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/quest_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay="true"
+            app:progress_colors="@array/material_colors"
+            app:progress_show_circle_backgroud="true"
+            app:wave_color="@android:color/transparent"
+            app:wave_height_type="higher"
+            app:wave_show="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20px"
+                        android:background="@drawable/funds_deal_shape"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="@string/hands_user" />
+
+                            <TextView
+                                android:id="@+id/ot_username"
+                                style="@style/funds_ATM_Money_textid" />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="@string/Current_limit" />
+
+                            <TextView
+                                android:id="@+id/ot_current"
+                                style="@style/funds_ATM_Money_textid" />
+                        </LinearLayout>
+
+
+                        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+                            <TextView
+                                android:layout_width="180px"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="20px"
+                                android:gravity="center_vertical"
+                                android:text="@string/save_money"
+                                android:textColor="@color/write"
+                                android:textSize="26px" />
+
+                            <EditText
+                                android:id="@+id/ot_money"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="14px"
+                                android:layout_marginRight="20px"
+                                android:layout_marginTop="14px"
+                                android:background="@drawable/funds_deal_shape_text"
+                                android:hint="请输入存款金额"
+                                android:inputType="number|numberDecimal"
+                                android:textColorHint="@color/edit_hint_color"
+                                android:maxLength="16"
+                                android:paddingLeft="25px"
+                                android:textColor="@color/write"
+                                android:textSize="25px" />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+                            <TextView
+                                style="@style/funds_ATM_Money"
+                                android:text="@string/save_money_min" />
+
+                            <TextView
+                                android:id="@+id/ot_minmoney"
+                                style="@style/funds_ATM_Money_textid" />
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/ot_radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/write"
+                            android:paddingLeft="40px"
+                            android:paddingRight="40px"
+                            android:orientation="vertical"></RadioGroup>
+
+                        <Button
+                            android:id="@+id/ot_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="35px"
+                            android:background="@drawable/funds_selector_button"
+                            android:gravity="center"
+                            android:text="@string/mow_save_money"
+                            android:textColor="@color/write"
+                            android:textSize="33px" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/main_computer_bottom"></include>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout>
+
+        <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout>
+
+    </FrameLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

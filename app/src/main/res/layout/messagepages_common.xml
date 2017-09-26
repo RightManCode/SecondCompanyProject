@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_listitem_textbg_shape">
+
+        <TextView
+            android:id="@+id/message_listitem_textview_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/message_listitem_textview_time"
+            android:padding="10px"
+            android:text="@string/message_c"
+            android:textColor="@color/message_text"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/message_listitem_textview_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/message_listitem_textview_left"
+            android:text="已读"
+            android:textColor="@color/message_message"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/message_listitem_textview_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/message_listitem_textview_ok"
+            android:padding="10px"
+            android:text="@string/message_d"
+            android:textColor="@color/message_text"
+            android:textSize="30px" />
+
+        <ImageView
+            android:id="@+id/message_listitem_delitem"
+            android:layout_width="65px"
+            android:layout_height="63px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:background="@drawable/closebtn"
+            android:contentDescription="" />
+
+        <TextView
+            android:id="@+id/message_listitem_textview_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="20px"
+            android:textColor="@color/message_text"
+            android:textSize="30px" />
+
+    </RelativeLayout>
+
+
+</merge>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/funds_deal_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/funds_ATM_Money_Linear"
+            android:layout_marginTop="15px">
+
+            <TextView
+                style="@style/funds_ATM_Money"
+                android:text="@string/hands_user" />
+
+            <TextView
+                android:id="@+id/hands_user_SR"
+                style="@style/funds_ATM_Money_textid" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+            <TextView
+                style="@style/funds_ATM_Money"
+                android:text="@string/hands_user_mame" />
+
+            <TextView
+                android:id="@+id/hands_user_mame_SR"
+                style="@style/funds_ATM_Money_textid" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+            <TextView
+                style="@style/funds_ATM_Money"
+                android:text="@string/hands_account" />
+
+            <TextView
+                android:id="@+id/hands_account_SR"
+                style="@style/funds_ATM_Money_textid" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+            <TextView
+                style="@style/funds_ATM_Money"
+                android:text="@string/hands_ATM_account" />
+
+            <TextView
+                android:id="@+id/hands_ATM_account_SR"
+                style="@style/funds_ATM_Money_textid" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+            <TextView
+                style="@style/funds_ATM_Money"
+                android:text="@string/hands_ATM_site" />
+
+            <TextView
+                android:id="@+id/hands_ATM_site_SR"
+                style="@style/funds_ATM_Money_textid" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+            <TextView
+                android:layout_width="180px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:gravity="center_vertical"
+                android:text="@string/hands_ATM_money"
+                android:textColor="@color/write"
+                android:textSize="26px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/hands_ATM_money_SR_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="14px"
+                    android:layout_marginTop="14px"
+                    android:layout_weight="2"
+                    android:background="@drawable/funds_deal_shape_text"
+                    android:hint="最低为：100元"
+                    android:inputType="number|numberDecimal"
+                    android:paddingLeft="25px"
+                    android:textColor="@color/write"
+                    android:textSize="25px" />
+
+                <Button
+                    android:id="@+id/atm_all"
+                    android:layout_width="0dp"
+                    android:layout_height="65px"
+                    android:layout_marginLeft="20px"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_button_lucency_selector"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="@color/write" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_ATM_Money_Linear">
+
+            <TextView
+                android:layout_width="180px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:gravity="center_vertical"
+                android:text="@string/hands_ATM_password"
+                android:textColor="@color/write"
+                android:textSize="26px" />
+
+            <EditText
+                android:id="@+id/hands_ATM_password_SR_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="14px"
+                android:layout_marginTop="14px"
+                android:background="@drawable/funds_deal_shape_text"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:paddingLeft="25px"
+                android:textColor="@color/write"
+                android:textSize="25px" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/hands_ATM_button"
+            android:layout_width="match_parent"
+            android:layout_height="95px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="30px"
+            android:background="@drawable/funds_selector_button"
+            android:gravity="center"
+            android:text="@string/tijiao"
+            android:textColor="@color/write"
+            android:textSize="33px" />
+
+        <include layout="@layout/hint_text"></include>
+
+    </LinearLayout>
+
+    <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>
+

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/quest_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:overlay="true"
+        app:progress_colors="@array/material_colors"
+        app:wave_color="@android:color/transparent"
+        app:progress_show_circle_backgroud="true"
+        app:wave_height_type="higher"
+        app:wave_show="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/line_srcollview"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="35px"
+                    android:background="@drawable/funds_deal_shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lt_from"
+                        style="@style/lineconversion_linear_text_style"
+                        android:drawableLeft="@drawable/walleticon"
+                        android:drawableRight="@drawable/icon_down"
+                        android:text="@string/judge_money" />
+
+
+                    <com.wishland.www.xinwanhaotest.view.customgridview.CustomGridView
+                        android:id="@+id/line_me_wallet_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2px"
+                        android:numColumns="3"
+                        android:verticalSpacing="2px" />
+
+                    <TextView
+                        android:id="@+id/lt_to"
+                        style="@style/lineconversion_linear_text_style"
+                        android:drawableLeft="@drawable/moneyicon"
+                        android:drawableRight="@drawable/icon_down"
+                        android:text="@string/account_in" />
+
+                    <com.wishland.www.xinwanhaotest.view.customgridview.CustomGridView
+                        android:id="@+id/line_to_wallet_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2px"
+                        android:numColumns="3"
+                        android:verticalSpacing="2px" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/lineconversion_linear_text_style"
+                                android:drawableLeft="@drawable/moneyicon"
+                                android:text="@string/in_money_rmb" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="14px"
+                                android:layout_marginLeft="20px"
+                                android:layout_marginRight="20px"
+                                android:layout_marginTop="14px"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/line_set_money_edittext"
+                                    android:layout_width="0px"
+                                    android:layout_height="75px"
+                                    android:layout_weight="5"
+                                    android:background="@drawable/funds_deal_shape_text"
+                                    android:hint="@string/line_money_t"
+                                    android:inputType="number"
+                                    android:textColorHint="@color/edit_hint_color"
+                                    android:maxLength="20"
+                                    android:maxLines="1"
+                                    android:paddingLeft="25px"
+                                    android:textColor="@color/write"
+                                    android:textSize="30px" />
+
+                                <Button
+                                    android:id="@+id/line_all_button"
+                                    android:layout_width="0px"
+                                    android:layout_height="75px"
+                                    android:layout_marginLeft="20px"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/login_button_lucency_selector"
+                                    android:text="@string/all_money"
+                                    android:textColor="@color/button_green"
+                                    android:textSize="25px"/>
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/line_linear_buttonone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70px"
+                                    android:layout_marginBottom="15px"
+                                    android:layout_marginLeft="20px"
+                                    android:layout_marginRight="20px"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/line_100_button"
+                                        style="@style/lineconversion_linear_button"
+                                        android:text="@string/one_hundred" />
+
+                                    <Button
+                                        android:id="@+id/line_200_button"
+                                        style="@style/lineconversion_linear_button"
+                                        android:layout_marginLeft="10px"
+                                        android:layout_marginRight="10px"
+                                        android:text="@string/two_hundred" />
+
+                                    <Button
+                                        android:id="@+id/line_500_button"
+                                        style="@style/lineconversion_linear_button"
+                                        android:text="@string/five_hundred" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/line_linear_buttontwo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70px"
+                                    android:layout_below="@+id/line_linear_buttonone"
+                                    android:layout_marginBottom="15px"
+                                    android:layout_marginLeft="20px"
+                                    android:layout_marginRight="20px"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/line_1000_button"
+                                        style="@style/lineconversion_linear_button"
+                                        android:text="@string/ten_hundred" />
+
+                                    <Button
+                                        android:id="@+id/line_5000_button"
+                                        style="@style/lineconversion_linear_button"
+                                        android:layout_marginLeft="10px"
+                                        android:layout_marginRight="10px"
+                                        android:text="@string/fifty_hundred" />
+
+                                    <Button
+                                        android:id="@+id/line_10000_button"
+                                        style="@style/lineconversion_linear_button"
+                                        android:text="@string/one_hundred_hundred" />
+                                </LinearLayout>
+
+                                <Button
+                                    android:id="@+id/line_putin_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="95px"
+                                    android:layout_below="@+id/line_linear_buttontwo"
+                                    android:layout_marginBottom="30px"
+                                    android:layout_marginLeft="30px"
+                                    android:layout_marginRight="30px"
+                                    android:layout_marginTop="30px"
+                                    android:background="@drawable/funds_selector_button"
+                                    android:gravity="center"
+                                    android:text="@string/tijiao"
+                                    android:textColor="@color/write"
+                                    android:textSize="30px" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/main_computer_bottom"></include>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </com.wishland.www.xinwanhaotest.view.refresh.MaterialRefreshLayout>
+
+    <com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.wishland.www.xinwanhaotest.view.customgridview.EmptyLayout>
+
+</FrameLayout>

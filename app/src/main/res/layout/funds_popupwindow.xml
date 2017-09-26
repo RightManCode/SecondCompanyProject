@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/funds_popupview"
+    android:layout_width="match_parent"
+    android:divider="@color/edit_hint_color"
+    android:dividerHeight="1dp"
+    android:background="@drawable/funds_popupitem_list_bg"
+    android:layout_height="wrap_content">
+</ListView>

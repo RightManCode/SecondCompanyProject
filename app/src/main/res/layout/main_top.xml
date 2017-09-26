@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_all_relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="85px"
+    android:background="@drawable/fund_submenu_bg">
+    <!--侧拉栏按钮 -->
+    <Button
+        android:id="@+id/main_login_side_bar"
+        android:layout_width="160px"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:drawableTop="@drawable/function"
+        android:gravity="center"
+        android:paddingTop="10px"
+        android:visibility="visible" />
+    <!--消息中心-->
+
+    <FrameLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/main_messagepage_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawablePadding="6px"
+            android:drawableTop="@drawable/messagepage"
+            android:gravity="center"
+            android:paddingTop="15px"
+            android:textColor="#D8D8D8"
+            android:textSize="23px"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/main_message_count_text"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="right"
+            android:background="@drawable/mian_message_count_shape"
+            android:gravity="center"
+            android:textColor="@color/write"
+            android:textSize="18px"
+            android:visibility="gone" />
+
+    </FrameLayout>
+    <!--<Button-->
+    <!--android:id="@+id/main_messagepage_button"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:drawableTop="@drawable/messagepage"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:visibility="visible"-->
+    <!--/>-->
+
+    <!--logo万濠会-->
+    <ImageView
+        android:id="@+id/top_imageview"
+        android:layout_width="180px"
+        android:layout_height="50px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15px"
+        android:background="@drawable/common_logo" />
+
+    <!--登出-->
+    <!--<TextView-->
+    <!--android:id="@+id/signout"-->
+    <!--style="@style/top_login"-->
+    <!--android:layout_alignParentRight="true"-->
+
+
+    <!--android:layout_marginRight="15px"-->
+    <!--android:padding="8px"-->
+    <!--android:text="@string/Loginout"-->
+    <!--android:visibility="gone" />-->
+    <!--注册-->
+    <TextView
+        android:id="@+id/signin"
+        style="@style/top_login"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15px"
+        android:padding="8px"
+        android:text="@string/signin"
+        android:visibility="visible" />
+
+    <!--&lt;!&ndash;设置图标&ndash;&gt;-->
+    <!--<ImageView-->
+    <!--android:id="@+id/setting_button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="25px"-->
+    <!--android:layout_toLeftOf="@+id/signout"-->
+    <!--android:background="@drawable/setting"-->
+    <!--android:contentDescription=""-->
+    <!--android:padding="22px"-->
+    <!--android:visibility="gone" />-->
+    <!--登录-->
+    <TextView
+        android:id="@+id/loginin"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="25px"
+        android:contentDescription=""
+        android:gravity="center_vertical"
+        android:padding="5px"
+        android:text="@string/loginin"
+        android:textColor="@color/write"
+        android:textSize="27px"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/signin"
+        android:layout_marginEnd="12dp" />
+
+
+    <!--&lt;!&ndash;login in 用戶賬戶&ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/login_username"-->
+    <!--style="@style/top_login"-->
+    <!--android:layout_marginRight="25px"-->
+    <!--android:layout_toLeftOf="@+id/setting_button"-->
+    <!--android:padding="8px"-->
+    <!--android:visibility="gone" />-->
+
+</com.zhy.autolayout.AutoRelativeLayout>

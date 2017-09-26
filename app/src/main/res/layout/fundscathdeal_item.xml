@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/funds_deal_shape"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="34px"
+                android:layout_height="28px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10px"
+                android:background="@drawable/celldottips"
+                android:contentDescription=""/>
+
+            <!--流水号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:orientation="horizontal"
+                android:padding="10px">
+
+                <TextView
+                    android:id="@+id/funds_deal_item1_T"
+                    android:layout_width="180px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:textColor="@color/write"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/funds_deal_item1_SR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/write"
+                    android:textSize="25px" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:id="@+id/funds_deal_item2_T"
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                android:id="@+id/funds_deal_item2_SR"
+                style="@style/funds_ATM_Money_textid" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:id="@+id/funds_deal_item3_T"
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                android:id="@+id/funds_deal_item3_SR"
+                style="@style/funds_ATM_Money_textid" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:id="@+id/funds_deal_item4_T"
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                android:id="@+id/funds_deal_item4_SR"
+                style="@style/funds_ATM_Money_textid" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:id="@+id/funds_deal_item5_T"
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                android:id="@+id/funds_deal_item5_SR"
+                style="@style/funds_ATM_Money_textid" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:id="@+id/funds_deal_item6_T"
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                android:id="@+id/funds_deal_item6_SR"
+                style="@style/funds_ATM_Money_textid" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/funds_deal_item7_Linear"
+            style="@style/funds_cath_deal_item_list">
+
+            <TextView
+                android:id="@+id/funds_deal_item7_T"
+                style="@style/funds_ATM_Money" />
+
+            <TextView
+                android:id="@+id/funds_deal_item7_SR"
+                style="@style/funds_ATM_Money_textid" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.zhy.autolayout.AutoFrameLayout>

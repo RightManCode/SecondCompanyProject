@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="6px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/fg_imageview"
+            android:layout_width="53px"
+            android:layout_height="53px"
+            android:layout_margin="8px"
+            app:actualImageScaleType="fitXY"
+            app:placeholderImage="@drawable/default_img"
+            app:placeholderImageScaleType="fitXY"
+            app:failureImage="@drawable/error"
+            app:failureImageScaleType="centerInside"
+            app:progressBarImage="@drawable/loading"
+            app:progressBarImageScaleType="centerInside"
+            app:progressBarAutoRotateInterval="1500"
+            app:retryImage="@drawable/reload"
+            app:retryImageScaleType="centerInside"/>
+
+
+        <TextView
+            android:id="@+id/fg_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8px"
+            android:textColor="@color/write"
+            android:text="按理来说疯狂减肥"
+            android:textSize="33px" />
+
+    </LinearLayout>
+
+
+</com.zhy.autolayout.AutoFrameLayout>
+

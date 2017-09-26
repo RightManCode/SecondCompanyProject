@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/line_gridview_item_click_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blank">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingBottom="30px"
+        android:gravity="center"
+        android:paddingTop="30px">
+
+
+        <TextView
+            android:id="@+id/line_gridview_item_textname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/write"
+            android:textSize="26px"
+            tools:text="我的钱包" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/line_gridview_item_textmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/write"
+                android:textSize="26px"
+                tools:text="1000.00" />
+
+            <ImageView
+                android:layout_marginLeft="7px"
+                android:id="@+id/line_item_request"
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:src="@drawable/icon_refresh" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_gridview_item_ok"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/icon_chk"
+        android:contentDescription="" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/account_sixspaces_shape_bg"
+        android:orientation="horizontal">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sixspaces_list_item_view"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_centerInParent="true"
+        android:layout_margin="20px"
+        app:actualImageScaleType="fitXY"
+        app:placeholderImage="@drawable/default_img"
+        app:placeholderImageScaleType="fitXY"
+        app:failureImage="@drawable/error"
+        app:failureImageScaleType="centerInside"
+        app:progressBarImage="@drawable/loading"
+        app:progressBarImageScaleType="centerInside"
+        app:progressBarAutoRotateInterval="1500"
+        app:retryImage="@drawable/reload"
+        app:retryImageScaleType="centerInside"/>
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="20px"
+        android:layout_marginRight="20px">
+
+
+
+        <FrameLayout
+            android:id="@+id/percent_frameone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_heightPercent="70%"
+            app:layout_widthPercent="100%">
+
+            <TextView
+                android:id="@+id/sixspaces_list_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="酒吧和纹条"
+                android:textColor="@color/red"
+                android:textSize="33px" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/percent_frameone"
+            app:layout_heightPercent="30%"
+            app:layout_widthPercent="100%">
+
+            <Button
+                android:id="@+id/sixspaces_list_item_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/sixspaces_list_item_shape"
+                android:text="@string/now_startgame"
+                android:textColor="@color/write"
+                android:textSize="33px" />
+
+        </FrameLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    </LinearLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

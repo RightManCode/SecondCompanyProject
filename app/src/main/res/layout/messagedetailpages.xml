@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_fanhui_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/funds_deal_shape"
+                android:orientation="vertical">
+
+                <include layout="@layout/messagepages_common" />
+
+                <TextView
+                    android:id="@+id/message_detailpages_message_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="20px"
+                    android:textColor="@color/write"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/message_detailpages_message_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="20px"
+                    android:ellipsize="end"
+                    android:textColor="@color/write"
+                    android:textSize="28px" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30px"
+                        android:text="@string/whh_name"
+                        android:textColor="@color/write"
+                        android:textSize="30px" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/message_detail_fanhui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="50px"
+                    android:layout_marginTop="50px"
+                    android:background="@drawable/message_deail_button_selector"
+                    android:text="@string/fanhui"
+                    android:textColor="@color/write"
+                    android:textSize="33px" />
+
+            </LinearLayout>
+
+            <include layout="@layout/main_computer_bottom"></include>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</com.zhy.autolayout.AutoLinearLayout>

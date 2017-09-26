@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/personalaccount_userdata_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#242B33"
+        android:gravity="center_vertical"
+        android:padding="15px"
+        android:paddingLeft="15px"
+        android:text="@string/person_account"
+        android:textColor="@color/message_text"
+        android:textSize="35px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="15px"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/hands_user" />
+
+        <TextView
+            android:id="@+id/personalaccount_user_SR"
+            style="@style/funds_ATM_Money_textid" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/personalaccount_time" />
+
+        <TextView
+            android:id="@+id/personalaccount_usertime_SR"
+            style="@style/funds_ATM_Money_textid" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/personalaccount_userloginintime" />
+
+        <TextView
+            android:id="@+id/personalaccount_userloginintime_SR"
+            style="@style/funds_ATM_Money_textid" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#242B33"
+        android:gravity="center_vertical"
+        android:padding="15px"
+        android:paddingLeft="15px"
+        android:text="@string/account_limit"
+        android:textColor="@color/message_text"
+        android:textSize="35px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/personalaccount_usermoney" />
+
+        <TextView
+            android:id="@+id/personalaccount_usermoney_SR"
+            style="@style/funds_ATM_Money_textid" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/personalaccount_usermoneycount" />
+
+        <TextView
+            android:id="@+id/personalaccount_usermoneycount_SR"
+            style="@style/funds_ATM_Money_textid" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#242B33">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="15px"
+            android:layout_centerVertical="true"
+            android:text="@string/finance_data"
+            android:textColor="@color/message_text"
+            android:textSize="35px" />
+
+        <TextView
+            android:id="@+id/persion_updata_bindbank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20px"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="修改银行"
+            android:textColor="@color/radiobutton_gray"
+            android:textSize="21px" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/personalaccount_payeeusername" />
+
+        <TextView
+            android:id="@+id/personalaccount_payeeusername_SR"
+            style="@style/funds_ATM_Money_textid" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:orientation="horizontal"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/personalaccount_payeebank" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/personalaccount_payeebank_SR"
+                style="@style/funds_ATM_Money_textid"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/personalaccount_bankaccount" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/personalaccount_bankaccount_SR"
+                style="@style/funds_ATM_Money_textid"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20px"
+        android:layout_marginLeft="20px"
+        android:padding="10px">
+
+        <TextView
+            style="@style/funds_ATM_Money"
+            android:text="@string/personalaccount_bankaddress" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/personalaccount_bankaddress_SR"
+                style="@style/funds_ATM_Money_textid"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
